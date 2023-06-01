@@ -10,6 +10,7 @@ import javax.swing.JLabel;
 public class Game {
 	public static int heads = 0;
 	public static int tails = 0;
+	public static int egg = 0;
 	static String picPathChoose = "_silver.png";
 	
 	private static int flipCoin() {
@@ -23,7 +24,7 @@ public class Game {
 			return choice;
 		}
 	}
-	
+
 	public static void flipMultiple(int x) {
 		int index = 1;
 		while (index <= x) {
@@ -57,6 +58,9 @@ public class Game {
 	}
 	
 	public static void showPic(String pic) {
+		if (egg == 1) {
+			pic = "egg";
+		}
 		JFrame jframe = new JFrame();
 		 jframe.setSize(280, 400); 
 		 jframe.setTitle("Coin Flip"); 
@@ -72,6 +76,8 @@ public class Game {
 	}
 	public static void secret() {
 		System.out.println("You found the easter egg!");
+		egg = 1;
+		
 	}
 	
 	public static void switchCoin() {
