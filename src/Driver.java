@@ -13,7 +13,7 @@ public class Driver {
 		   if (switchChoice.equals("y")) {
 			   Game.switchCoin();
 		   }
-		   else if (switchChoice.equals("Easter")) {
+		   else if (switchChoice.equals("Egg")) {
 			   Game.secret();
 		   }
 		   
